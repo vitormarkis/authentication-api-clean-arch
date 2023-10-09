@@ -1,4 +1,4 @@
-import ListUserUseCase from "@/list-user/use-case"
+import ListUserUseCase from "@/@core/list-user/use-case"
 import { Request, Response } from "express"
 
 export default class ListUserController {

@@ -1,5 +1,5 @@
-import { RegisterUserUseCaseDTOInput } from "@/register-user/dto"
-import RegisterUserUseCase from "@/register-user/use-case"
+import { RegisterUserUseCaseDTOInput } from "@/@core/register-user/dto"
+import RegisterUserUseCase from "@/@core/register-user/use-case"
 import { Request, Response } from "express"
 
 export default class RegisterUserController {

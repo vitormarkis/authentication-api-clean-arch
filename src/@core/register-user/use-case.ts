@@ -1,6 +1,6 @@
-import { AuthService } from "@/interfaces/auth-service"
-import { TokenService } from "@/interfaces/token-service"
-import { RegisterUserUseCaseDTOInput, RegisterUserUseCaseDTOOutput } from "@/register-user/dto"
+import { AuthService } from "@/@core/interfaces/auth-service"
+import { TokenService } from "@/@core/interfaces/token-service"
+import { RegisterUserUseCaseDTOInput, RegisterUserUseCaseDTOOutput } from "@/@core/register-user/dto"
 import { UseCase } from "@/use-case-interface"
 import { UsersRepository } from "@/users-repository"
 

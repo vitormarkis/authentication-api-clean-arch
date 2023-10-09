@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken"
 
-import { NSTokenService, TokenService } from "@/interfaces/token-service"
+import { NSTokenService, TokenService } from "@/@core/interfaces/token-service"
 
 export default class TokenServiceImpl implements TokenService {
   constructor() {}

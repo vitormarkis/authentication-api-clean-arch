@@ -1,9 +1,9 @@
-import RegisterUserController from "@/register-user/controller"
-import RegisterUserUseCase from "@/register-user/use-case"
+import RegisterUserController from "@/@core/register-user/controller"
+import RegisterUserUseCase from "@/@core/register-user/use-case"
 import { Router } from "express"
 import InMemoryUsersRepository from "@/in-memory-user-repository"
-import ListUserController from "@/list-user/controller"
-import ListUserUseCase from "@/list-user/use-case"
+import ListUserController from "@/@core/list-user/controller"
+import ListUserUseCase from "@/@core/list-user/use-case"
 import AuthServiceImpl from "@/implementations/auth-service-impl"
 import TokenServiceImpl from "@/implementations/token-service-impl"
 
