@@ -6,6 +6,6 @@ POST http://localhost:3939/register
 content-type: application/json
 
 {
-  "username": "stop",
-  "password": "latex9"
+  "username": "vitormarkis",
+  "password": "vitor123"
 }

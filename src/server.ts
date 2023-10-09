@@ -1,10 +1,7 @@
+import dotenv from "dotenv"
+dotenv.config()
+
 import { router } from "@/routes"
-import RegisterUserController from "@/register-user/controller"
-import RegisterUserUseCase from "@/register-user/use-case"
-import { Router } from "express"
-import InMemoryUsersRepository from "@/in-memory-user-repository"
-import ListUserController from "@/list-user/controller"
-import ListUserUseCase from "@/list-user/use-case"
 
 import express from "express"
 
