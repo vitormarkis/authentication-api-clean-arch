@@ -1,0 +1,9 @@
+/register
+
+/auth
+CONTROLLER (REQUEST, RESPONSE)
+  - chama use-case AuthenticateUseCase
+  
+
+
+PRESENTER (FORMATO PARA FRONT-END)
