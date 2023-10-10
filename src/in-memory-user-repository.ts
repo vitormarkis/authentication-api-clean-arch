@@ -6,6 +6,10 @@ export default class InMemoryUsersRepository implements UsersRepository {
 
   constructor() {}
 
+  async getUserByUsername(username: string): Promise<User | null> {
+    return this.users.find(u => u.username === username) ?? null
+  }
+
   async list(): Promise<User[]> {
     return this.users
   }
