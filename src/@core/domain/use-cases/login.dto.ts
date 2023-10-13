@@ -4,8 +4,9 @@ export interface LoginUseCaseDTOInput {
 }
 
 export interface LoginUseCaseDTOOutput {
-  credentials: {
+  data: {
     username: string
+    role: string
   }
   accessToken: string
 }

@@ -6,6 +6,12 @@ export default class InMemoryUsersRepository implements UsersRepository {
 
   constructor() {}
 
+  async update(user: User): Promise<void> {
+    const userIndexOf = this.users.indexOf(user)
+    if (userIndexOf === -1) throw new Error("User not storaged.")
+    this.users[userIndexOf] = user
+  }
+
   async getUserByUsername(username: string): Promise<User | null> {
     return this.users.find(u => u.username === username) ?? null
   }

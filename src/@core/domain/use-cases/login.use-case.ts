@@ -29,8 +29,9 @@ export default class LoginUseCase implements UseCase<LoginUseCaseDTOInput, Login
 
     return {
       accessToken,
-      credentials: {
+      data: {
         username,
+        role: user.role.name,
       },
     }
   }

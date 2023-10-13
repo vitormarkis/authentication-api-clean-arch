@@ -18,7 +18,7 @@ export default class RegisterUserUseCase
   async execute({ password, username }: RegisterUserUseCaseDTOInput): Promise<RegisterUserUseCaseDTOOutput> {
     const hashedPassword = this.authService.hashPassword({ password })
 
-    await this.usersRepository.register({
+    const user = await this.usersRepository.register({
       password: hashedPassword,
       username,
     })
@@ -29,6 +29,7 @@ export default class RegisterUserUseCase
       accessToken,
       credentials: {
         username,
+        role: user.role.name,
       },
     }
   }

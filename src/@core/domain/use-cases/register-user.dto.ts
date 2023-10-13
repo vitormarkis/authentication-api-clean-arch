@@ -6,6 +6,7 @@ export interface RegisterUserUseCaseDTOInput {
 export interface RegisterUserUseCaseDTOOutput {
   credentials: {
     username: string
+    role: string
   }
   accessToken: string
 }
