@@ -37,7 +37,7 @@ const listUserPresenter = new ListUserPresenter()
 export const router = Router()
 
 router.get("/users", async (request, response) => {
-  return new ListUserController(listUserUseCase).handle(request, response)
+  return new ListUserController(listUserUseCase, tokenService, usersRepository).handle(request, response)
 })
 
 router.post("/register", async (request, response) => {

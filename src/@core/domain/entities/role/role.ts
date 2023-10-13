@@ -10,7 +10,7 @@ export default abstract class Role implements RoleProps {
 }
 
 export enum Permissions {
-  SEE_ALL_USER_POSTS,
+  SEE_ALL_USERS,
 }
 
 export type RoleType = "ADMIN" | "USER"
