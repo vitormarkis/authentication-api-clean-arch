@@ -1,5 +1,5 @@
-import ListUserUseCase from "@/@core/list-user/use-case"
 import { Request, Response } from "express"
+import ListUserUseCase from "~/@core/domain/use-cases/list-user.use-case"
 
 export default class ListUserController {
   constructor(readonly listUserUseCase: ListUserUseCase) {}

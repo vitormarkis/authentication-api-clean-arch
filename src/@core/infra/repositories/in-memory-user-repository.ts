@@ -1,5 +1,5 @@
-import User from "@/user"
-import { UsersRepository, UsersRepositoryDTO } from "@/users-repository"
+import User from "@/@core/domain/entities/user"
+import { UsersRepository, UsersRepositoryDTO } from "~/@core/domain/repositories/users-repository"
 
 export default class InMemoryUsersRepository implements UsersRepository {
   users: User[] = []

@@ -6,8 +6,8 @@ POST http://localhost:3939/register
 content-type: application/json
 
 {
-  "username": "vitormarkis",
-  "password": "admin"
+  "username": "leoschell",
+  "password": "root"
 }
 
 ###
@@ -16,6 +16,20 @@ POST http://localhost:3939/login
 content-type: application/json
 
 {
-  "username": "vitormarkis",
-  "password": "admin"
+  "username": "leoschell",
+  "password": "root"
 }
+
+###
+
+POST http://localhost:3939/posts
+content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTY5MDI5NzQsInN1YiI6IjAubmxxbXI1YnVqOWgifQ.b_dCNrGbd5nK1t6g--gzJecbpr3vDKv_lsNjCQ_49qA
+
+{
+  "content": "another one"
+}
+
+###
+
+GET http://localhost:3939/posts/leoschell

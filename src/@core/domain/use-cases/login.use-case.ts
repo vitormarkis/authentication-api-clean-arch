@@ -1,8 +1,8 @@
-import { AuthService } from "@/@core/interfaces/auth-service"
-import { TokenService } from "@/@core/interfaces/token-service"
-import { LoginUseCaseDTOInput, LoginUseCaseDTOOutput } from "@/@core/login/dto"
-import { UseCase } from "@/use-case-interface"
-import { UsersRepository } from "@/users-repository"
+import { LoginUseCaseDTOInput, LoginUseCaseDTOOutput } from "~/@core/domain/use-cases/login.dto"
+import { UseCase } from "~/@core/domain/interfaces/use-case-interface"
+import { AuthService } from "~/@core/domain/interfaces/auth-service"
+import { TokenService } from "~/@core/domain/interfaces/token-service"
+import { UsersRepository } from "~/@core/domain/repositories/users-repository"
 
 export default class LoginUseCase implements UseCase<LoginUseCaseDTOInput, LoginUseCaseDTOOutput> {
   constructor(
@@ -25,7 +25,7 @@ export default class LoginUseCase implements UseCase<LoginUseCaseDTOInput, Login
       throw new Error("Invalid password.")
     }
 
-    const { accessToken } = this.tokenService.generate({ subject: user.id })
+    const { accessToken } = this.tokenService.generate({ subject: user.username })
 
     return {
       accessToken,

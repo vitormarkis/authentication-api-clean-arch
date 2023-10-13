@@ -1,6 +1,6 @@
-import { LoginUseCaseDTOInput } from "@/@core/login/dto"
-import LoginUseCase from "@/@core/login/use-case"
+import { LoginUseCaseDTOInput } from "~/@core/domain/use-cases/login.dto"
 import { Request, Response } from "express"
+import LoginUseCase from "~/@core/domain/use-cases/login.use-case"
 
 export default class LoginController {
   constructor(readonly loginUseCase: LoginUseCase) {}

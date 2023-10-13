@@ -1,4 +1,4 @@
-import { UsersRepository } from "@/users-repository"
+import { UsersRepository } from "~/@core/domain/repositories/users-repository";
 
 export default class ListUserUseCase {
   constructor(readonly usersRepository: UsersRepository) {}

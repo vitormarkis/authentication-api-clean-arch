@@ -1,4 +1,4 @@
-import User from "@/user"
+import User from "@/@core/domain/entities/user"
 
 export namespace UsersRepositoryDTO {
   export interface RegisterInput {

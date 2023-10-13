@@ -8,7 +8,10 @@
     "skipLibCheck": true,
     "rootDir": ".",
     "paths": {
+      "~/*": ["./src/*"],
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"]
 }

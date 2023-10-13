@@ -1,6 +1,6 @@
-import { RegisterUserUseCaseDTOInput } from "@/@core/register-user/dto"
-import RegisterUserUseCase from "@/@core/register-user/use-case"
+import { RegisterUserUseCaseDTOInput } from "~/@core/domain/use-cases/register-user.dto"
 import { Request, Response } from "express"
+import RegisterUserUseCase from "~/@core/domain/use-cases/register-user.use-case"
 
 export default class RegisterUserController {
   constructor(readonly registerUserUseCase: RegisterUserUseCase) {}

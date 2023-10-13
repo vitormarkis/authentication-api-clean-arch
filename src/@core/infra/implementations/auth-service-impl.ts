@@ -1,5 +1,5 @@
+import { AuthService, NSAuthService } from "~/@core/domain/interfaces/auth-service"
 import bcrypt from "bcrypt"
-import { AuthService, NSAuthService } from "@/@core/interfaces/auth-service"
 
 export default class AuthServiceImpl implements AuthService {
   readonly saltRounds: number = 10
