@@ -12,17 +12,7 @@ export default class ListUserController {
 
   async handle(request: Request, response: Response) {
     try {
-      const authorizationToken = request.headers.authorization
-      if (!authorizationToken) throw new Error("No authorization token provided.")
-
-      const [bearer, tokenHeader] = authorizationToken.split(" ")
-      if (bearer.toLowerCase() !== "bearer") {
-        throw new Error("Invalid token provided")
-      }
-
-      const { subject: username } = this.tokenService.validate({ tokenHeader })
-
-      const user = await this.usersRepository.getUserByUsername(username)
+      const user = await this.usersRepository.getUserByUsername(request.user.username)
       if (!user) throw new Error("User not found.")
 
       const isAllowed = this.listUserUseCase.checkPermissions(user.role)

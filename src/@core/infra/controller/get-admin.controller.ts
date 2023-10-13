@@ -12,19 +12,9 @@ export default class GetAdminController {
 
   async handle(request: Request, response: Response) {
     try {
-      const authorizationToken = request.headers.authorization
-      if (!authorizationToken) throw new Error("No authorization token provided.")
-
-      const [bearer, tokenHeader] = authorizationToken.split(" ")
-      if (bearer.toLowerCase() !== "bearer") {
-        throw new Error("Invalid token provided")
-      }
-
-      const { subject: username } = this.tokenService.validate({ tokenHeader })
-
       const output = await this.adminUserUseCase.execute({
         role: new AdminRole(),
-        username,
+        username: request.user.username,
       })
 
       return response.status(200).json(output)

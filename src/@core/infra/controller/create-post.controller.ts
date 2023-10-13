@@ -11,19 +11,9 @@ export default class CreatePostController {
 
   async handle(request: Request, response: Response) {
     try {
-      const authorizationToken = request.headers.authorization
-      if (!authorizationToken) throw new Error("No authorization token provided.")
-
-      const [bearer, tokenHeader] = authorizationToken.split(" ")
-      if (bearer.toLowerCase() !== "bearer") {
-        throw new Error("Invalid token provided")
-      }
-
-      const { subject: authorUsername } = this.tokenService.validate({ tokenHeader })
-
       const input: CreatePostUseCaseDTOInput = {
         content: request.body.content,
-        authorUsername: authorUsername,
+        authorUsername: request.user.username,
       }
 
       const output = await this.createPostUseCase.execute(input)
